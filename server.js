@@ -13,6 +13,10 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine','ejs');
 app.set('port', (process.env.PORT || 8080));
 
+//static files
+console.log('__dirname equal '+ __dirname);
+app.use(express.static(__dirname+'/public'));
+
 //Create an express route for the home page
 app.get('/', function(req, res){
 	res.sendfile('index.html');
