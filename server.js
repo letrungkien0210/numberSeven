@@ -21,6 +21,13 @@ app.use(express.static(__dirname+'/public'));
 app.get('/', function(req, res){
 	res.sendfile('index.html');
 });
+app.get('/registry', function(req, res){
+	res.sendfile('registry.html');
+});
+app.get('/login', function(req, res){
+	res.sendfile('login.html');
+});
+
 
 // START THE SERVER
 // ==================================================
