@@ -16,6 +16,7 @@
   "homepage": "https://bitbucket.org/letrungkien0210/triplana#readme",
   "dependencies": {
     "ejs": "^2.3.4",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "material-design-icons": "^2.0.0"
   }
 }

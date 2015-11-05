@@ -1,3 +1,6 @@
+p{
+      font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
 .demo-layout-transparent {
   background: url('/images/background_banner.jpg') center / cover;
 }
