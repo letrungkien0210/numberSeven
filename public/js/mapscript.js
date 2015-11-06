@@ -2,7 +2,7 @@ var locate;
 var markers = [];
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -33.8688, lng: 151.2195},
+    center: {lat: 10.767523, lng: 106.706772},
     zoom: 13
   });
   var input = /** @type {!HTMLInputElement} */(
@@ -88,8 +88,7 @@ function initMap() {
 
     function click() {
         addMarker(locate); 
-        console.log("add successed");
-        console.log(markers);
+        marker.setVisible(false);
     }
     document.getElementById('btn-add').onclick = click;
 }
