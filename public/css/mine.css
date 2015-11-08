@@ -17,3 +17,12 @@ p{
   margin: 14px 10px;
   color: white;
 }
+.card-title{
+  padding: 6px 24px;
+}
+.card-title-text{
+  font-size: 20px;
+}
+.card-title-content,.card-title-tooltip{
+  font-size: 17px;
+}
