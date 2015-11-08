@@ -23,9 +23,12 @@ app.get('/', function(req, res){
 });
 app.get('/registry', function(req, res){
 	res.sendfile('registry.html');
-});
+}); 
 app.get('/login', function(req, res){
 	res.sendfile('login.html');
+});
+app.get('/addlocate', function(req, res){
+    res.sendfile('addlocate.html');
 });
 
 
