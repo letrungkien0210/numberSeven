@@ -1,16 +1,5 @@
-var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-var labelIndex = 0;
-var locate;
-var markers = [];
-var info_for_markers = [];
-var address_for_markers = [];
-var waypts = [];
-var map;
-var place;
-var address;
-var directionsDisplay;
-var directionsService;
-var save_response;
+var myVar = setInterval(function(){}, 1000);
+clearInterval(myVar);
 
 function initMap() {
   directionsDisplay = new google.maps.DirectionsRenderer;
@@ -30,8 +19,8 @@ function initMap() {
   var autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.bindTo('bounds', map);
 
-  var infowindow = new google.maps.InfoWindow();
-  var marker = new google.maps.Marker({
+  infowindow = new google.maps.InfoWindow();
+  marker = new google.maps.Marker({
     map: map,
     anchorPoint: new google.maps.Point(0, -29)
   });
@@ -85,14 +74,15 @@ function initMap() {
   } 
 
   setupClickListener('changetype-all', []);
+  
+}
 
-    function click() {
-        addMarker(locate); 
-        marker.setVisible(false);
-        infowindow.close();
-        check_number();
-    }
-  document.getElementById('btn-add').onclick = click;
+//Click to add mark
+function click() {
+    addMarker(locate); 
+    marker.setVisible(false);
+    infowindow.close();
+    check_number();
 }
 
 // Adds a marker to the map and push to the array.
@@ -112,7 +102,6 @@ function addMarker(location) {
   var infowin = new google.maps.InfoWindow();
   infowin.setContent('<div><strong>' + info_for_markers.pop() + '</strong><br>' + address_for_markers.pop());
   infowin.open(map, marker);
-  console.log(marker.position.lat() +" "+marker.position.lng() );
     if(markers.length>1)   
     {
         waypts.push({ location });
@@ -147,7 +136,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, start, f
     travelMode: google.maps.TravelMode.DRIVING
   }, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-        console.log(response);
       directionsDisplay.setDirections(response);
     } else {
       window.alert('Directions request failed due to ' + status);
@@ -161,5 +149,4 @@ function check_number() {
         calculateAndDisplayRoute(directionsService, directionsDisplay, markers[0], markers[markers.length-1]);
     }
 }
-
 
