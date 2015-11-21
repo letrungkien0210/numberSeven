@@ -16,8 +16,6 @@ p{
 .button-place{
   margin: 14px 10px;
   color: white;
-<<<<<<< HEAD
-=======
 }
 .card-title{
   padding: 6px 24px;
@@ -27,5 +25,4 @@ p{
 }
 .card-title-content,.card-title-tooltip{
   font-size: 17px;
->>>>>>> origin/master
 }

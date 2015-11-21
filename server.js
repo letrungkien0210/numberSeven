@@ -7,15 +7,12 @@ var app =express();
 // CONFIGURE THE APP
 // ==================================================
 // tell node where to look for site resources
+console.log('__dirname equal '+ __dirname);
 app.use(express.static(__dirname + '/public'));
 
 //set the view engine to ejs
 app.set('view engine','ejs');
 app.set('port', (process.env.PORT || 8080));
-
-//static files
-console.log('__dirname equal '+ __dirname);
-app.use(express.static(__dirname+'/public'));
 
 //Create an express route for the home page
 app.get('/', function(req, res){
