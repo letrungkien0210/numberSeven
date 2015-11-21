@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Triplana
+    link(rel='stylesheet', href='../css/material.min.css')
+    link(rel='stylesheet', href='../css/map.css')
+    script(src='../js/material.min.js')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA6_w4JGbAIxN3kTeKJ-CZ7DqB0pg2ZlWw&signed_in=true&libraries=places&callback=initMap', async='', defer='')
+    script(src='/js/mapscript.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='/js/jquery.js')
+    script(src='/js/variable.js')
+    link(rel='stylesheet', href='/css/form.css')
+    style.
+      ::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+      ::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+      ::-webkit-datetime-edit-text:not([aria-valuenow]),
+      ::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+      color: transparent;
+      }
+  body
+    .wrapper(style='display: block;')
+      div
+        #map
+      input#pac-input.controls(type='text', placeholder='Enter a location')
+      #type-selector
+        button#btn-add.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent
+          | Thêm địa điểm
+        button#btn-finish.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored
+          | Hoàn thành
+    #form
+      #add_info.mdl-card.mdl-shadow--2dp.through.mdl-shadow--16dp
+        .mdl-card__title
+          | Thêm thông tin chuyến đi
+        .mdl-card__actions.mdl-card--border
+          .mdl-card__supporting-text
+            .mdl-textfield.mdl-js-textfield
+              input#name.mdl-textfield__input(type='text')
+              label.mdl-textfield__label(for='name') Tên
+            .mdl-textfield.mdl-js-textfield
+              span
+                input#startdate.mdl-textfield__input(type='date')
+                label.mdl-textfield__label(for='startdate') Ngày bắt đầu
+            .mdl-textfield.mdl-js-textfield
+              input#finishdate.mdl-textfield__input(type='date')
+              label.mdl-textfield__label(for='finishdate') Ngày kết thúc
+            .mdl-textfield.mdl-js-textfield
+              input#cost.mdl-textfield__input(type='text', pattern='-?[0-9]*(\.[0-9]+)?')
+              label.mdl-textfield__label(for='cost') Chi phí cho một người
+            .mdl-textfield.mdl-js-textfield
+              input#transport.mdl-textfield__input(type='text')
+              label.mdl-textfield__label(for='transport') Phương tiện di chuyển
+            .mdl-textfield.mdl-js-textfield
+              input#number_member.mdl-textfield__input(type='number', min='1')
+              label.mdl-textfield__label(for='number_member') Số người hiện có
+            .mdl-textfield.mdl-js-textfield
+              p(style='font-size: 17px;') Bạn có muốn tìm người đi chung
+              label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for='option-1')
+                input#option-1.mdl-radio__button(type='radio', name='options', value='1', checked='')
+                span.mdl-radio__label Có
+              label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for='option-2')
+                input#option-2.mdl-radio__button(type='radio', name='options', value='2')
+                span.mdl-radio__label Không
+            .mdl-textfield.mdl-js-textfield
+              textarea#note.mdl-textfield__input(type='text', rows='3')
+              label.mdl-textfield__label(for='note') Lưu ý
+            div(style='text-align: center;')
+              button#btn-submit.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent
+                | Submit
+              button#btn-cancel.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored
+                | Cancel
