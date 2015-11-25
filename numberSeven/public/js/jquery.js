@@ -53,6 +53,7 @@ var submit_cancel = function() {
         $("#form").removeClass("display");
         $("#form").addClass("hide");
         console.log(infomation);
+        document.location.href = 'information';
     });   
     
 };

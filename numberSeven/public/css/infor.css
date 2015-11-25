@@ -1,0 +1,54 @@
+p{
+      font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+.demo-layout-transparent {
+  background: url('/images/background_banner.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+.demo-layout-transparent .mdl-navigation__link{
+    color: white;
+}
+
+.mdl-layout__content {
+    margin: auto;
+    width: 90%;
+    /*border:3px solid #73AD21;*/
+    padding: 10px;
+    height: 100%;
+}
+
+.mdl-card {
+    width: 100%;
+    height: 100%;
+}
+
+.mdl-card__title {
+    padding-left: 40%;
+    height: 10px;
+    background-color: bisque;
+    color: brown;
+    border-radius: 20px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+#show-info{
+    background: #ff6666;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#pic-info{
+    border: 3px solid #ff7633;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
