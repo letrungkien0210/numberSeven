@@ -35,52 +35,31 @@ html
           .mdl-layout__content
             .mdl-grid
               .mdl-cell.mdl-cell--8-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
-                form#show-info
-                  .inline
-                    label Tên: 
-                  .inline
-                    p#name_show
-                  br
-                  .inline
-                    label Thời gian xuất phát:
-                  .inline
-                    p#startdate_show
-                  br
-                  .inline
-                    label Thời gian kết thúc: 
-                  .inline
-                    p#enddate_show
-                  br
-                  .inline
-                    label Chi phí mỗi người: 
-                  .inline
-                    p#cost_show
-                  br
-                  .inline
-                    label Lịch trình khái quát: 
-                  .inline
-                    p#trip_show
-                  br
-                  .inline
-                    label Số người hiện có: 
-                  .inline
-                    p#member_number_show
-                  br
-                  .inline
-                    label Số bạn cần tìm: 
-                  .inline
-                    p#need_show
-                  br
-                  .inline
-                    label Lưu ý: 
-                  .inline
-                    p#note_show
+                form#show-info.mdl-grid
+                  .mdl-cell.mdl-cell--6-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
+                    .label Tên: 
+                    .label Thời gian xuất phát: 
+                    .label Thời gian kết thúc: 
+                    .label Chi phí mỗi người: 
+                    .label Lịch trình khái quát: 
+                    .label Số người hiện có: 
+                    .label Số bạn cần tìm: 
+                    .label Lưu ý: 
+                  .mdl-cell.mdl-cell--6-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
+                    .p#name_show
+                    .p#startdate_show
+                    .p#enddate_show
+                    .p#cost_show
+                    .p#trip_show
+                    .p#member_number_show
+                    .p#need_show
+                    .p#note_show
                 h5 Rủ bạn đồng hành
                 button.mdl-button.mdl-js-button.mdl-button--raised Mời bạn bè
               .mdl-cell.mdl-cell--4-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
                 form#pic-info
                   img(src='/images/nhatrang.jpg', style='width: 100%;')
-                  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored Thêm hình ảnh
+                  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(style='margin-top: 3%;') Thêm hình ảnh
       footer.mdl-mini-footer
         .mdl-mini-footer__left-section
           .mdl-logo Title

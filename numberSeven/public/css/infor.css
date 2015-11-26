@@ -42,12 +42,11 @@ p{
 #show-info{
     background: #ff6666;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 #pic-info{
-    border: 3px solid #ff7633;
-    border-radius: 8px;
+   /* border: 3px solid #ff7633;*/
     width: 100%;
     text-align: center;
 }
