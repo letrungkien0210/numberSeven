@@ -27,6 +27,11 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/locates', locates);
 
+app.get('/*', function(req, res, next){ 
+  res.setHeader('Last-Modified', (new Date()).toUTCString());
+  next(); 
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
