@@ -334,6 +334,33 @@ html
         p.animated.fadeInDown City Tours / Tour Tickets / Tour Guides
         a.animated.fadeInUp.button_intro(href='#') View Tours
         a.animated.fadeInUp.button_intro.outline(href='#') View Tickets
+      #search_bar_container
+        .container
+          .search_bar
+            span#nav-search-in.nav-facade-active
+              span#nav-search-in-content(style='') All tours
+              |                             
+              span.nav-down-arrow.nav-sprite
+              |                             
+              select#searchDropdownBox.searchSelect(title='Search in', name='tours_category')
+                option(value='All Tours', title='All Tours') All Tours
+                |                                 
+                option(value='Museums', title='Museums') Museums
+                |                                 
+                option(value='Tickets', title='Tickets') Tickets
+                |                                 
+                option(value='Hotels', title='Hotels') Hotels
+                |                                 
+                option(value='Restaurants', title='Restaurants') Restaurants
+            |                             
+            .nav-searchfield-outer
+              input#twotabsearchtextbox(type='text', autocomplete='off', name='field-keywords', placeholder='Type your search terms ....')
+            |                             
+            .nav-submit-button
+              input.nav-submit-input(type='submit', title='Cerca', value='Search')
+          // End search bar
+      // /search_bar
+
     // End hero
     // Content is placed here
     block content
