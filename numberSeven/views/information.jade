@@ -1,0 +1,70 @@
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title Triplana
+    link(rel='stylesheet', href='/css/material.min.css')
+    link(rel='stylesheet', href='/css/infor.css')
+    script(src='/js/material.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+    script(src='/js/jquery.js')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  body  
+    .demo-layout-transparent.mdl-layout.mdl-js-layout
+      header.mdl-layout__header.mdl-layout__header--transparent
+        .mdl-layout__header-row
+          // Title
+          span.mdl-layout-title
+            a(href='/') Trang chủ
+          // Add spacer, to align navigation to the right
+          .mdl-layout-spacer
+          // Navigation
+          nav.mdl-navigation
+            a.mdl-navigation__link(href='registry') Đăng kí
+            a.mdl-navigation__link(href='login') Đăng nhập
+      .mdl-layout__drawer
+        span.mdl-layout-title Title
+        nav.mdl-navigation
+          a.mdl-navigation__link(href='') Link
+          a.mdl-navigation__link(href='') Link
+          a.mdl-navigation__link(href='') Link
+          a.mdl-navigation__link(href='') Link
+      main.mdl-layout__content
+        .mdl-card
+          .mdl-card__title
+            h5 Thông tin chuyến đi
+          .mdl-layout__content
+            .mdl-grid
+              .mdl-cell.mdl-cell--8-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
+                form#show-info.mdl-grid
+                  .mdl-cell.mdl-cell--6-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
+                    .label Tên: 
+                    .label Thời gian xuất phát: 
+                    .label Thời gian kết thúc: 
+                    .label Chi phí mỗi người: 
+                    .label Lịch trình khái quát: 
+                    .label Số người hiện có: 
+                    .label Số bạn cần tìm: 
+                    .label Lưu ý: 
+                  .mdl-cell.mdl-cell--6-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
+                    .p#name_show
+                    .p#startdate_show
+                    .p#enddate_show
+                    .p#cost_show
+                    .p#trip_show
+                    .p#member_number_show
+                    .p#need_show
+                    .p#note_show
+                h5 Rủ bạn đồng hành
+                button.mdl-button.mdl-js-button.mdl-button--raised Mời bạn bè
+              .mdl-cell.mdl-cell--4-col.mdl-cell--6-col-phone.mdl-cell--6-col-tablet
+                form#pic-info
+                  img(src='/images/nhatrang.jpg', style='width: 100%;')
+                  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--colored(style='margin-top: 3%;') Thêm hình ảnh
+      footer.mdl-mini-footer
+        .mdl-mini-footer__left-section
+          .mdl-logo Title
+          ul.mdl-mini-footer__link-list
+            li
+              a(href='#') Help
+            li
+              a(href='#') Privacy & Terms
