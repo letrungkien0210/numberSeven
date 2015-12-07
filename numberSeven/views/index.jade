@@ -1,155 +1,370 @@
-html
-  htmnl
-    head
-      meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-      title Triplana
-      link(rel='stylesheet', href='css/material.min.css')
-      link(rel='stylesheet', href='css/mine.css')
-      script(src='js/material.min.js')
-      link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
-    body
-      .demo-layout-transparent.mdl-layout.mdl-js-layout
-        header.mdl-layout__header.mdl-layout__header--transparent
-          .mdl-layout__header-row
-            // Title
-            span.mdl-layout-title
-              a(href='/') Trang chủ
-            // Add spacer, to align navigation to the right
-            .mdl-layout-spacer
-            // Navigation
-            nav.mdl-navigation
-              a.mdl-navigation__link(href='registry') Đăng kí
-              a.mdl-navigation__link(href='login') Đăng nhập
-        .mdl-layout__drawer
-          span.mdl-layout-title Title
-          nav.mdl-navigation
-            a.mdl-navigation__link(href='') Link
-            a.mdl-navigation__link(href='') Link
-            a.mdl-navigation__link(href='') Link
-            a.mdl-navigation__link(href='') Link
-        main.mdl-layout__content
-          .mdl-grid
-            .mdl-cell.mdl-cell--2-col
-            .mdl-cell.mdl-cell--8-col
-              form(action='#', style='color:white; text-align:right')
-                .mdl-textfield.mdl-js-textfield.mdl-textfield--expandable
-                  label.mdl-button.mdl-js-button.mdl-button--icon(for='sample6')
-                    i.material-icons search
-                  .mdl-textfield__expandable-holder
-                    input#sample6.mdl-textfield__input(type='text')
-                    label.mdl-textfield__label(for='sample-expandable') Expandable Input
-              .mdl-grid
-                button.mdl-button.mdl-js-button.button-place
-                  | Host places
-                button.mdl-button.mdl-js-button.button-place
-                  | Trending
-                button.mdl-button.mdl-js-button.button-place
-                  | Newest
-                a(href='/locates/addlocate')
-                  button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent.button-place
-                    | Thêm địa điểm
-              .mdl-grid
-                .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
-                  .mdl-card__media(style='text-align:center')
-                    img(src='images/danang.jpg', style='width:100%;')
-                  .card-title.mdl-card__title
-                    p.card-title-text.mdl-card__title-text Đà Nẵng
-                  .card-title.mdl-card__title
-                    // So nguoi quan tam
-                    div(style='display:flex;')
-                      #danang_intersted_icon.material-icons.dp48(style='font-size: 17px;') visibility
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_icon') Số người quan tâm
-                      p#danang_intersted_number.card-title-content.mdl-card__title-text 10.000
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_number') Số người quan tâm
-                    div(style='padding:0px 10px')
-                    // So chueyn di qua do
-                    div(style='display:flex;')
-                      #danang_travel_icon.material-icons.dp48(style='font-size: 17px;') location_on
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_icon') Đã có chuyến đi
-                      p#danang_travel_number.card-title-content.mdl-card__title-text 300
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_number') Đã có chuyến đi
-                .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
-                  .mdl-card__media(style='text-align:center')
-                    img(src='images/hanoi.jpg', style='width:100%;')
-                  .card-title.mdl-card__title
-                    p.card-title-text.mdl-card__title-text Hà Nội
-                  .card-title.mdl-card__title
-                    // So nguoi quan tam
-                    div(style='display:flex;')
-                      #danang_intersted_icon.material-icons.dp48(style='font-size: 17px;') visibility
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_icon') Số người quan tâm
-                      p#danang_intersted_number.card-title-content.mdl-card__title-text 10.000
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_number') Số người quan tâm
-                    div(style='padding:0px 10px')
-                    // So chueyn di qua do
-                    div(style='display:flex;')
-                      #danang_travel_icon.material-icons.dp48(style='font-size: 17px;') location_on
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_icon') Đã có chuyến đi
-                      p#danang_travel_number.card-title-content.mdl-card__title-text 300
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_number') Đã có chuyến đi
-                .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
-                  .mdl-card__media(style='text-align:center')
-                    img(src='images/hagiang.jpg', style='width:100%;')
-                  .card-title.mdl-card__title
-                    p.card-title-text.mdl-card__title-text Hà Giang
-                  .card-title.mdl-card__title
-                    // So nguoi quan tam
-                    div(style='display:flex;')
-                      #danang_intersted_icon.material-icons.dp48(style='font-size: 17px;') visibility
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_icon') Số người quan tâm
-                      p#danang_intersted_number.card-title-content.mdl-card__title-text 10.000
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_number') Số người quan tâm
-                    div(style='padding:0px 10px')
-                    // So chueyn di qua do
-                    div(style='display:flex;')
-                      #danang_travel_icon.material-icons.dp48(style='font-size: 17px;') location_on
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_icon') Đã có chuyến đi
-                      p#danang_travel_number.card-title-content.mdl-card__title-text 300
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_number') Đã có chuyến đi
-                .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
-                  .mdl-card__media(style='text-align:center')
-                    img(src='images/danang.jpg', style='width:100%;')
-                  .card-title.mdl-card__title
-                    h4.card-title-text.mdl-card__title-text Đà Nẵng
-                  .card-title.mdl-card__title
-                    // So nguoi quan tam
-                    div(style='display:flex;')
-                      #danang_intersted_icon.material-icons.dp48(style='font-size: 17px;') visibility
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_icon') Số người quan tâm
-                      p#danang_intersted_number.card-title-content.mdl-card__title-text 10.000
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_number') Số người quan tâm
-                    div(style='padding:0px 10px')
-                    // So chueyn di qua do
-                    div(style='display:flex;')
-                      #danang_travel_icon.material-icons.dp48(style='font-size: 17px;') location_on
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_icon') Đã có chuyến đi
-                      p#danang_travel_number.card-title-content.mdl-card__title-text 300
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_number') Đã có chuyến đi
-                .mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet.mdl-cell--4-col-phone.mdl-card.mdl-shadow--3dp
-                  .mdl-card__media(style='text-align:center')
-                    img(src='images/hanoi.jpg', style='width:100%;')
-                  .card-title.mdl-card__title
-                    p.card-title-text.mdl-card__title-text Hà Nội
-                  .card-title.mdl-card__title
-                    // So nguoi quan tam
-                    div(style='display:flex;')
-                      #danang_intersted_icon.material-icons.dp48(style='font-size: 17px;') visibility
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_icon') Số người quan tâm
-                      p#danang_intersted_number.card-title-content.mdl-card__title-text 10.000
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_intersted_number') Số người quan tâm
-                    div(style='padding:0px 10px')
-                    // So chueyn di qua do
-                    div(style='display:flex;')
-                      #danang_travel_icon.material-icons.dp48(style='font-size: 17px;') location_on
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_icon') Đã có chuyến đi
-                      p#danang_travel_number.card-title-content.mdl-card__title-text 300
-                      p.card-title-tooltip.mdl-tooltip.is-active(for='danang_travel_number') Đã có chuyến đi
-            .mdl-cell.mdl-cell--2-col
-        footer.mdl-mini-footer
-          .mdl-mini-footer__left-section
-            .mdl-logo Title
-            ul.mdl-mini-footer__link-list
-              li
-                a(href='#') Help
-              li
-                a(href='#') Privacy & Terms
+extends layout
+block content
+  //Syntax for jade is 2 space for indent
+  .container.margin_60
+      .main_title
+        h2
+          | Paris 
+          span Top
+          |  Tours
+        p Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
+      .row
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.1s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_1.jpg', alt='')
+                .ribbon.top_rated
+                .short_info
+                  i.icon_set_1_icon-44
+                  | Historic Buildings
+                  span.price
+                    sup $
+                    | 39
+            .tour_title
+              h3
+                strong Arc Triomphe
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.2s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_2.jpg', width='800', height='533', alt='')
+                .ribbon.top_rated
+                .badge_save
+                  | Save
+                  strong 30%
+                .short_info
+                  i.icon_set_1_icon-43
+                  | Churches
+                  span.price
+                    sup $
+                    | 45
+            .tour_title
+              h3
+                strong Notredame
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.3s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_3.jpg', width='800', height='533', alt='')
+                .ribbon.popular
+                .short_info
+                  i.icon_set_1_icon-44
+                  | Historic Buildings
+                  span.price
+                    sup $
+                    | 48
+            .tour_title
+              h3
+                strong Versailles
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.4s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_4.jpg', width='800', height='533', alt='')
+                .ribbon.popular
+                .badge_save
+                  | Save
+                  strong 30%
+                .short_info
+                  i.icon_set_1_icon-30
+                  | Walking tour
+                  span.price
+                    sup $
+                    | 36
+            .tour_title
+              h3
+                strong Pompidue
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.5s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_14.jpg', width='800', height='533', alt='')
+                .ribbon.popular
+                .short_info
+                  i.icon_set_1_icon-28
+                  | Skyline tours
+                  span.price
+                    sup $
+                    | 42
+            .tour_title
+              h3
+                strong Tour Eiffel
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.6s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_5.jpg', width='800', height='533', alt='')
+                .ribbon.top_rated
+                .short_info
+                  i.icon_set_1_icon-44
+                  | Historic Buildings
+                  span.price
+                    sup $
+                    | 40
+            .tour_title
+              h3
+                strong Pantheon
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.7s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_8.jpg', width='800', height='533', alt='')
+                .ribbon.top_rated
+                .short_info
+                  i.icon_set_1_icon-3
+                  | City sightseeing
+                  span.price
+                    sup $
+                    | 35
+            .tour_title
+              h3
+                strong Open Bus
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.8s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_9.jpg', width='800', height='533', alt='')
+                .ribbon.top_rated
+                .short_info
+                  i.icon_set_1_icon-4
+                  | Museums
+                  span.price
+                    sup $
+                    | 38
+            .tour_title
+              h3
+                strong Louvre museum
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+        .col-md-4.col-sm-6.wow.zoomIn(data-wow-delay='0.9s')
+          .tour_container
+            .img_container
+              a(href='single_tour.html')
+                img.img-responsive(src='images/tour_box_12.jpg', width='800', height='533', alt='')
+                .ribbon.top_rated
+                .short_info
+                  i.icon_set_1_icon-14
+                  | Eat & drink
+                  span.price
+                    sup $
+                    | 25
+            .tour_title
+              h3
+                strong Boulangerie
+                |  tour
+              .rating
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile.voted
+                i.icon-smile
+                small (75)
+              // end rating
+              .wishlist
+                a.tooltip_flip.tooltip-effect-1(href='javascript:void(0);')
+                  | +
+                  span.tooltip-content-flip
+                    span.tooltip-back Add to wishlist
+              // End wish list
+          // End box tour
+        // End col-md-4
+      // End row
+      p.text-center.nopadding
+        a.btn_1.medium(href='#')
+          i.icon-eye-7
+          | View all tours (144)
+    // End container
+  .container.margin_60
+      //.main_title
+        h2
+          | Some 
+          span good
+          |  reasons
+        p
+          | Quisque at tortor a libero posuere laoreet vitae sed arcu. Curabitur consequat.
+      //.row
+        .col-md-4.wow.zoomIn(data-wow-delay='0.2s')
+          .feature_home
+            i.icon_set_1_icon-41
+            h3
+              span +120
+              |  Premium tours
+            p
+              | Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+            a.btn_1.outline(href='about.html') Read more
+        .col-md-4.wow.zoomIn(data-wow-delay='0.4s')
+          .feature_home
+            i.icon_set_1_icon-30
+            h3
+              span +1000
+              |  Customers
+            p
+              | Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+            a.btn_1.outline(href='about.html') Read more
+        .col-md-4.wow.zoomIn(data-wow-delay='0.6s')
+          .feature_home
+            i.icon_set_1_icon-57
+            h3
+              span H24 
+              |  Support
+            p
+              | Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+            a.btn_1.outline(href='about.html') Read more
+      // End row
+      hr
+      .row
+        .col-md-8.col-sm-6.hidden-xs
+          img.img-responsive.laptop(src='images/laptop.png', alt='Laptop')
+        .col-md-4.col-sm-6
+          h3
+            span Get started
+            |  with CityTours
+          p
+            | Lorem ipsum dolor sit amet, vix erat audiam ei. Cum doctus civibus efficiantur in. Nec id tempor imperdiet deterruisset.
+          ul.list_order
+            li
+              span 1
+              | Select your preferred tours
+            li
+              span 2
+              | Purchase tickets and options
+            li
+              span 3
+              | Pick them directly from your office
+          a.btn_1(href='all_tour_list.html') Start now
+      // End row
