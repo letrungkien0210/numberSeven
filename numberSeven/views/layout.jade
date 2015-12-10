@@ -7,28 +7,7 @@ doctype html
 html
   // <![endif]
   head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='keywords', content='template, tour template, city tours, city tour, tours tickets, transfers, travel, travel template')
-    meta(name='description', content='Citytours - Premium site template for city tours agencies, transfers and tickets.')
-    meta(name='author', content='Ansonika')
-    title CITY TOURS - City tours and travel site template by Ansonika
-    // Favicons
-    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
-    link(rel='apple-touch-icon', type='image/x-icon', href='images/apple-touch-icon-57x57-precomposed.png')
-    link(rel='apple-touch-icon', type='image/x-icon', sizes='72x72', href='images/apple-touch-icon-72x72-precomposed.png')
-    link(rel='apple-touch-icon', type='image/x-icon', sizes='114x114', href='images/apple-touch-icon-114x114-precomposed.png')
-    link(rel='apple-touch-icon', type='image/x-icon', sizes='144x144', href='images/apple-touch-icon-144x144-precomposed.png')
-    // CSS
-    link(href='css/base.css', rel='stylesheet')
-    // Google web fonts
-    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Gochi+Hand', rel='stylesheet', type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Lato:300,400', rel='stylesheet', type='text/css')
-    //if lt IE 9
-      script(src='js/html5shiv.min.js')
-      script(src='js/respond.min.js')
+    block header
   body
     //if lte IE 8
       p.chromeframe
@@ -328,41 +307,8 @@ html
                 // End dropdown-cart
       // container
     // End Header
-    section#hero
-      .intro_title
-        h1.animated.fadeInDown Affordable Paris tours
-        p.animated.fadeInDown City Tours / Tour Tickets / Tour Guides
-        a.animated.fadeInUp.button_intro(href='#') View Tours
-        a.animated.fadeInUp.button_intro.outline(href='#') View Tickets
-      #search_bar_container
-        .container
-          .search_bar
-            span#nav-search-in.nav-facade-active
-              span#nav-search-in-content(style='') All tours
-              |                             
-              span.nav-down-arrow.nav-sprite
-              |                             
-              select#searchDropdownBox.searchSelect(title='Search in', name='tours_category')
-                option(value='All Tours', title='All Tours') All Tours
-                |                                 
-                option(value='Museums', title='Museums') Museums
-                |                                 
-                option(value='Tickets', title='Tickets') Tickets
-                |                                 
-                option(value='Hotels', title='Hotels') Hotels
-                |                                 
-                option(value='Restaurants', title='Restaurants') Restaurants
-            |                             
-            .nav-searchfield-outer
-              input#twotabsearchtextbox(type='text', autocomplete='off', name='field-keywords', placeholder='Type your search terms ....')
-            |                             
-            .nav-submit-button
-              input.nav-submit-input(type='submit', title='Cerca', value='Search')
-          // End search bar
-      // /search_bar
-
-    // End hero
-    // Content is placed here
+    block slide
+    
     block content
     // End container
     footer
