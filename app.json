@@ -1,0 +1,10 @@
+{
+  "name": "numberSeven",
+  "scripts": {
+  },
+  "env": {
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
