@@ -772,7 +772,7 @@ a#email_footer:before{
 #hero {
     position: relative;
     height: 600px;
-    background: #4d536d url(../images/slide_hero.jpg) no-repeat center center;
+    background: #4d536d url(../images/banners/slide2.jpg) no-repeat center center;
     background-size: cover;
     color:#fff;
 	width: 100%;

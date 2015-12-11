@@ -1,6 +1,7 @@
 extends layout
 
 block header
+  asss
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -10,7 +11,7 @@ block header
   title CITY TOURS - City tours and travel site template by Ansonika
   // Favicons
   link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
-  link(rel='apple-touch-icon', type='image/x-icon', href='../images/apple-touch-icon-57x57-precomposed.png')
+  link(rel='apple-touch-icon', type='image/x-icon', href='images/apple-touch-icon-57x57-precomposed.png')
   link(rel='apple-touch-icon', type='image/x-icon', sizes='72x72', href='images/apple-touch-icon-72x72-precomposed.png')
   link(rel='apple-touch-icon', type='image/x-icon', sizes='114x114', href='images/apple-touch-icon-114x114-precomposed.png')
   link(rel='apple-touch-icon', type='image/x-icon', sizes='144x144', href='images/apple-touch-icon-144x144-precomposed.png')
@@ -21,8 +22,8 @@ block header
   link(href='http://fonts.googleapis.com/css?family=Gochi+Hand', rel='stylesheet', type='text/css')
   link(href='http://fonts.googleapis.com/css?family=Lato:300,400', rel='stylesheet', type='text/css')
   //if lt IE 9
-    script(src='../js/html5shiv.min.js')
-    script(src='../js/respond.min.js')
+    script(src='js/html5shiv.min.js')
+    script(src='js/respond.min.js')
 
 block content
   section#hero.login
@@ -33,27 +34,25 @@ block content
             .text-center
               img(src='images/logo_sticky.png', alt='', data-retina='true')
             hr
-            form
+            form(method='post', action='/register', enctype='multipart/form-data')
+              .form-group
+                label Email
+                input.form-control(name='email', type='email', placeholder='Email')
               .form-group
                 label Username
                 |                                     
-                input.form-control(type='text', placeholder='Username')
-              |                                 
-              .form-group
-                label Email
-                |                                     
-                input.form-control(type='email', placeholder='Email')
-              |                                 
+                input.form-control(name='username', type='text', placeholder='Username')
+              |                                                                  
               .form-group
                 label Password
                 |                                     
-                input#password1.form-control(type='password', placeholder='Password')
+                input#password1.form-control(name='password', type='password', placeholder='Password')
               |                                 
               .form-group
                 label Confirm password
                 |                                     
-                input#password2.form-control(type='password', placeholder='Confirm password')
+                input#password2.form-control(name='passwordconfirm', type='password', placeholder='Confirm password')
               |                                 
               #pass-info.clearfix
               |                                 
-              button.btn_full Create an account
+              button.btn_full(name='submit', type='submit', value='Create an account') 
