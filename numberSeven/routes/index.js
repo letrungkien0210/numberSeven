@@ -1,10 +1,10 @@
 var express = require('express');
-var router = express.Router();
+
 /*For Users router*/
 var User = require('../models/User.js');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
- 
+var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -25,6 +25,8 @@ router.get('/login', function (req, res, next) {
 });
 
 router.post('/register', function (req, res, next) {
+  if(!req.body) return res.sendStatus(400);
+  
   //Get Form values
   var email = req.body.email;
   var username = req.body.username;
@@ -36,7 +38,7 @@ router.post('/register', function (req, res, next) {
   req.checkBody('email', 'Email is invalid').isEmail();
   req.checkBody('username', 'Username field is required').notEmpty();
   req.checkBody('password', 'Password field is required').notEmpty();
-  req.checkBody('passwordConfirm', 'Password do not match').equals(req.body.password);
+  req.checkBody('passwordconfirm', 'Password do not match').equals(password);
   
   //Check for errors
   var errors = req.validationErrors();
@@ -50,7 +52,7 @@ router.post('/register', function (req, res, next) {
       password2: passwordConfirm
     });
   } else {
-    var newUser = ({
+    var newUser =new User({
       email: email,
       username: username,
       password: password

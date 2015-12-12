@@ -152,4 +152,8 @@ var toggles = document.querySelectorAll(".cmn-toggle-switch");
         }
         $button.parent().find("input").val(newVal);
     });
+    
+    $('#Sign_up').on('click', function name(params) {
+       window.location = "/register";
+    });
 });
