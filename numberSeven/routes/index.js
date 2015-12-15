@@ -20,7 +20,7 @@ router.get('/register', function (req, res, next) {
 
 router.get('/login', function (req, res, next) {
   res.render('login', {
-    'title': 'Register'
+    'title': 'Login'
   });
 });
 
@@ -104,7 +104,9 @@ passport.use(new LocalStrategy(
   }
 ));
 
-router.post('/login', passport.authenticate('local',{failureRedirect:'/users/login', failureFlash:'Invalid username or password'}), function(req, res){
+router.post('/login', 
+      passport.authenticate('local',{failureRedirect:'/login', failureFlash:'Invalid username or password'}), 
+      function(req, res){
   console.log('Authentication Successful');
   req.flash('success','You are logged in');
   res.redirect('/');
@@ -113,7 +115,7 @@ router.post('/login', passport.authenticate('local',{failureRedirect:'/users/log
 router.get('/logout', function(req, res){
   req.logout();
   req.flash('success', 'You have logged out');
-  res.redirect('/users/login');
+  res.redirect('/login');
 });
 
 module.exports = router;

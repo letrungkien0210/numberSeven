@@ -35,7 +35,7 @@ block content
             |                             
             hr
             |                             
-            form
+            form(method='post', action='/login', enctype='multipart/form-data')
               .row
                 .col-md-6.col-sm-6.login_social
                   a.btn.btn-primary.btn-block(href='#')
@@ -67,4 +67,4 @@ block content
               |                                 
               a.btn_full(href='#') Sign in
               |                                 
-              a.btn_full_outline(href='register.html ') Register
+              a.btn_full_outline(href='/register') Register
