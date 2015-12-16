@@ -55,16 +55,17 @@ block content
               .form-group
                 label Username
                 |                                     
-                input.form-control(type='text', placeholder='Username')
+                input.form-control(name='username',type='text', placeholder='Username')
               |                                 
               .form-group
                 label Password
                 |                                     
-                input.form-control(type='password', placeholder='Password')
+                input.form-control(name='password',type='password', placeholder='Password')
               |                                 
               p.small
                 a(href='#') Forgot Password?
               |                                 
-              a.btn_full(href='#') Sign in
+              //a.btn_full(href='#') Sign in
+              input.btn_full(type='submit', name='Sing_in', value='Sing in')
               |                                 
               a.btn_full_outline(href='/register') Register
