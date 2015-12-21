@@ -36,34 +36,44 @@ html
               strong 0045 043204434
             .col-md-6.col-sm-6.col-xs-6
               ul#top_links
-                li
-                  .dropdown.dropdown-access
-                    a#access_link.dropdown-toggle(href='#', data-toggle='dropdown') Sign in
-                    .dropdown-menu
-                      .row
-                        .col-md-6.col-sm-6.col-xs-6
-                          a.bt_facebook(href='#')
-                            i.icon-facebook
-                            | Facebook
-                        .col-md-6.col-sm-6.col-xs-6
-                          a.bt_paypal(href='#')
-                            i.icon-paypal
-                            | Paypal
-                      .login-or
-                        hr.hr-or
-                        span.span-or or
-                      form(method='post', action='/login', enctype='multipart/form-data')
+                if user
+                  li
+                    .dropdown.dropdown-profile
+                      a.dropdown-toggle(href="#",data-toggle="dropdown",id="access_link") Wellcome Username
+                      .dropdown-menu
                         .form-group
-                          input#inputUsernameEmail.form-control(name='username',type='text', placeholder='username')
-                        .form-group
-                          input#inputPassword.form-control(name='password',type='password', placeholder='Password')
-                        a#forgot_pw(href='#') Forgot password?
-                        input#Sign_in.button_drop(type='submit', name='Sign_in', value='Sign in')
-                        //input#Sign_up.button_drop.outline(type='submit', name='Sign_up', value='Sign up')
-                        a#Sign_up.button_drop.outline(href='/register') Sign up
-                  // End Dropdown access
-                li
-                  a#wishlist_link(href='wishlist.html') Wishlist
+                          a#profile(href="#") Profile
+                else
+                  li
+                    .dropdown.dropdown-access
+                      a#access_link.dropdown-toggle(href='#', data-toggle='dropdown') Sign in
+                      .dropdown-menu
+                        .row
+                          .col-md-6.col-sm-6.col-xs-6
+                            a.bt_facebook(href='#')
+                              i.icon-facebook
+                              | Facebook
+                          .col-md-6.col-sm-6.col-xs-6
+                            a.bt_paypal(href='#')
+                              i.icon-paypal
+                              | Paypal
+                        .login-or
+                          hr.hr-or
+                          span.span-or or
+                        form(method='post', action='/login', enctype='multipart/form-data')
+                          .form-group
+                            input#inputUsernameEmail.form-control(name='username',type='text', placeholder='username')
+                          .form-group
+                            input#inputPassword.form-control(name='password',type='password', placeholder='Password')
+                          a#forgot_pw(href='#') Forgot password?
+                          input#Sign_in.button_drop(type='submit', name='Sign_in', value='Sign in')
+                          //input#Sign_up.button_drop.outline(type='submit', name='Sign_up', value='Sign up')
+                          a#Sign_up.button_drop.outline(href='/register') Sign up
+                    // End Dropdown access
+                if user
+                  li
+                    .dropdown.dropdown-profile
+                      a#access_link(href='/logout') Logout
           // End row
         // End container
       // End top line
