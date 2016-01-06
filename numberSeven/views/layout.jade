@@ -323,84 +323,9 @@ html
     
     block content
     // End container
-    footer
-      .container
-        .row
-          .col-md-4.col-sm-3
-            h3 Need help?
-            a#phone(href='tel://004542344599') +45 423 445 99
-            a#email_footer(href='mailto:help@citytours.com') help@citytours.com
-          .col-md-3.col-sm-3
-            h3 About
-            ul
-              li
-                a(href='#') About us
-              li
-                a(href='#') FAQ
-              li
-                a(href='#') Login
-              li
-                a(href='#') Register
-              li
-                a(href='#') Terms and condition
-          .col-md-3.col-sm-3
-            h3 Discover
-            ul
-              li
-                a(href='#') Community blog
-              li
-                a(href='#') Tour guide
-              li
-                a(href='#') Wishlist
-              li
-                a(href='#') Gallery
-          .col-md-2.col-sm-3
-            h3 Settings
-            .styled-select
-              select#lang.form-control(name='lang')
-                option(value='English', selected='') English
-                option(value='French') French
-                option(value='Spanish') Spanish
-                option(value='Russian') Russian
-            .styled-select
-              select#currency.form-control(name='currency')
-                option(value='USD', selected='') USD
-                option(value='EUR') EUR
-                option(value='GBP') GBP
-                option(value='RUB') RUB
-        // End row
-        .row
-          .col-md-12
-            #social_footer
-              ul
-                li
-                  a(href='#')
-                    i.icon-facebook
-                li
-                  a(href='#')
-                    i.icon-twitter
-                li
-                  a(href='#')
-                    i.icon-google
-                li
-                  a(href='#')
-                    i.icon-instagram
-                li
-                  a(href='#')
-                    i.icon-pinterest
-                li
-                  a(href='#')
-                    i.icon-vimeo
-                li
-                  a(href='#')
-                    i.icon-youtube-play
-                li
-                  a(href='#')
-                    i.icon-linkedin
-              p © Citytours 2015
-        // End row
-      // End container
-    // End footer
+    
+    block footer
+    
     #toTop
     // Back to top button
     // Common scripts
@@ -409,5 +334,5 @@ html
     script(src='js/functions.js')
     // Map
     script(src='http://maps.googleapis.com/maps/api/js')
-    script(type='text/javascript', src='js/map_home.js')
+    script(type='text/javascript', src='js/map_full_page.js')
     script(type='text/javascript', src='js/infobox.js')

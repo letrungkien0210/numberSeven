@@ -105,7 +105,7 @@ passport.use(new LocalStrategy(
 ));
 
 router.post('/login', 
-      passport.authenticate('local',{failureRedirect:'/login',redirectStatus: 303, failureFlash:'Invalid username or password'}), 
+      passport.authenticate('local',{failureRedirect:'/login',failureFlash:'Invalid username or password'}), 
       function(req, res){
   console.log('Authentication Successful');
   req.flash('success','You are logged in');
@@ -117,6 +117,12 @@ router.get('/logout', function(req, res){
   req.flash('success', 'You have logged out');
   res.redirect('/');
 });
+
+router.get('/addplace', function(req, res){
+  res.render('addplace',{
+    'title':'Add place'
+  });
+})
 
 function ensureAuthenticated(req, res, next){
   if(req.isAuthenticated()){

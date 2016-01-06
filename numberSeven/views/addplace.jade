@@ -1,0 +1,58 @@
+extend layout
+
+block header
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  meta(name='keywords', content='template, tour template, city tours, city tour, tours tickets, transfers, travel, travel template')
+  meta(name='description', content='Citytours - Premium site template for city tours agencies, transfers and tickets.')
+  meta(name='author', content='Ansonika')
+  title= title
+  // Favicons
+  link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+  link(rel='apple-touch-icon', type='image/x-icon', href='images/apple-touch-icon-57x57-precomposed.png')
+  link(rel='apple-touch-icon', type='image/x-icon', sizes='72x72', href='images/apple-touch-icon-72x72-precomposed.png')
+  link(rel='apple-touch-icon', type='image/x-icon', sizes='114x114', href='images/apple-touch-icon-114x114-precomposed.png')
+  link(rel='apple-touch-icon', type='image/x-icon', sizes='144x144', href='images/apple-touch-icon-144x144-precomposed.png')
+  // CSS
+  link(href='css/base.css', rel='stylesheet')
+  // Google web fonts
+  link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Gochi+Hand', rel='stylesheet', type='text/css')
+  link(href='http://fonts.googleapis.com/css?family=Lato:300,400', rel='stylesheet', type='text/css')
+  //if lt IE 9
+    script(src='js/html5shiv.min.js')
+    script(src='js/respond.min.js')
+ 
+block content
+  #map.map(style='border-bottom:none; height:100%; width:100%; position:absolute; top:0; left:0;')
+  #map_filter
+  ul
+    li
+      a(href="javascript:toggleMarkers('Historic');")
+        i.icon_set_1_icon-44
+        span Historic Buildings
+    li
+      a(href="javascript:toggleMarkers('Sightseeing');")
+        i.icon_set_1_icon-3
+        span City sightseeing
+    li
+      a(href="javascript:toggleMarkers('Museums');")
+        i.icon_set_1_icon-4
+        span Museum
+    li
+      a(href="javascript:toggleMarkers('Skyline');")
+        i.icon_set_1_icon-28
+        span Skyline tours
+    li
+      a(href="javascript:toggleMarkers('Eat_drink');")
+        i.icon_set_1_icon-14
+        span Eat & Drink
+    li
+      a(href="javascript:toggleMarkers('Walking');")
+        i.icon_set_1_icon-37
+        span Walking tours
+    li
+      a(href="javascript:toggleMarkers('Churches');")
+        i.icon_set_1_icon-43
+        span Churces

@@ -38,6 +38,19 @@ a#phone:before, a#email_footer:before{
 /* New v1.4 */
 #search{padding: 0 5%;padding-top:130px;}
 .plan {min-height: inherit;}
+
+/* New v1.8 */
+.parallax-content-1 div h1,#hero_2 .intro_title h1{
+	font-size:42px;
+}
+.parallax-content-1 div h1:before,.parallax-content-1 div h1:after {
+    width: 30px;
+}
+#hero_2 .intro_title h1:before,#hero_2 .intro_title h1:after {
+    width: 30px;
+}
+#map_filter ul li a {min-width: 100px;}
+#map_filter ul li a span{ font-size:11px;}
 }
 @media (min-width: 769px) and (max-width: 979px) {
 #map-container {height:280px;position:relative;top:0;overflow:hidden; }
@@ -275,6 +288,11 @@ border-radius: 3px;
 }
 .plan-tall {margin-right:0;}
 
+/* New v1.8 */
+#map_filter ul li a {min-width: inherit;}
+#map_filter ul li a span{ display:none;}
+#map_filter ul li a i{font-size:24px;}
+
 }
 
 /* Mobile Landscape */
@@ -338,6 +356,8 @@ ul#top_tools{ margin:0 25px 0 0;}
 .promo_full_wp div a i{
 	font-size:60px;
 }
+/* New v1.8 */
+#map_filter ul li a i{font-size:18px;}
 
 }
 

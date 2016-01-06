@@ -34,7 +34,9 @@ block content
               img(src='images/logo_sticky.png', alt='', data-retina='true')
             |                             
             hr
-            |                             
+            |       
+            .alert.alert-danger= message
+              
             form(method='post', action='/login', enctype='multipart/form-data')
               .row
                 .col-md-6.col-sm-6.login_social
